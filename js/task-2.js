@@ -26,7 +26,6 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('.gallery');
-console.log(galleryEl);
 
 const resStr = images
   .map(img => `<li><img src="${img.url}" alt="${img.alt}"/></li>`)

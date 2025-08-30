@@ -31,5 +31,5 @@ console.log(galleryEl);
 const resStr = images
   .map(img => `<li><img src="${img.url}" alt="${img.alt}"/></li>`)
   .join('');
-console.log(resStr);
+
 galleryEl.insertAdjacentHTML('beforeend', resStr);

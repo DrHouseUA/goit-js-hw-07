@@ -11,4 +11,3 @@ allListItemsEl.forEach(
 Category: ${item.previousElementSibling.textContent}
 Elements: ${item.children.length}`)
 );
-console.log(res);

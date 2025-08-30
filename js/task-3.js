@@ -3,9 +3,6 @@ const refs = {
   outputEl: document.querySelector('#name-output'),
 };
 
-console.log(refs.inputEl);
-console.log(refs.outputEl);
-
 refs.inputEl.addEventListener('input', onInput);
 
 function onInput(e) {

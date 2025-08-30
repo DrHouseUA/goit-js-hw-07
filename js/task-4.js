@@ -18,6 +18,6 @@ function handleOnSubmitForm(event) {
     validData.email = emailEl.value.trim();
     validData.password = passwordEl.value.trim();
     console.log(validData);
+    formElement.reset();
   }
-  formElement.reset();
 }

@@ -1,37 +1,21 @@
-'use strict';
+const refs = {
+  inputEl: document.querySelector('#name-input'),
+  outputEl: document.querySelector('#name-output'),
+};
 
-console.log('Task 3 begins here:');
+console.log(refs.inputEl);
+console.log(refs.outputEl);
 
-class StringBuilder {
-  #value;
+refs.inputEl.addEventListener('input', onInput);
 
-  constructor(initialValue) {
-    this.#value = initialValue;
-  }
+function onInput(e) {
+  const inputValueEl = e.target;
+  const normlzInput = inputValueEl.value.trim();
 
-  getValue() {
-    return this.#value;
-  }
-
-  padEnd(str) {
-    this.#value = this.#value + str;
-  }
-
-  padStart(str) {
-    this.#value = str + this.#value;
-  }
-
-  padBoth(str) {
-    this.padStart(str);
-    this.padEnd(str);
+  if (normlzInput !== '') {
+    console.log(normlzInput);
+    refs.outputEl.textContent = normlzInput;
+  } else {
+    refs.outputEl.textContent = 'Anonymous';
   }
 }
-
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // "."
-builder.padStart('^');
-console.log(builder.getValue()); // "^."
-builder.padEnd('^');
-console.log(builder.getValue()); // "^.^"
-builder.padBoth('=');
-console.log(builder.getValue()); // "=^.^="
